@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: cd module3_task1
-      - run: ./setup.sh
+      - run: ls
       - run: make help
       - run: make build
       - run: make clean
