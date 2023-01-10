@@ -15,4 +15,4 @@ jobs:
       - run: cd module3_task1 && make build
       - run: cd module3_task1 && make clean
       - run: cd module3_task1 && make build
-      - run: cd module3_task1 && make post POST_NAME="Test name" POST_TITLE="test_title"
+      - run: cd module3_task1 && make post POST_NAME="test_name" POST_TITLE="Test title"
