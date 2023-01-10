@@ -1,3 +1,4 @@
+---
 name: module3_task1
 on:   # yamllint disable-line rule:truthy
   push:
@@ -15,4 +16,4 @@ jobs:
       - run: cd module3_task1 && make build
       - run: cd module3_task1 && make clean
       - run: cd module3_task1 && make build
-      - run: cd module3_task1 && make post POST_NAME="test_name" POST_TITLE="Test title"
+      - run: cd module3_task1 && make post POST_NAME="my_name" POST_TITLE="ti"
