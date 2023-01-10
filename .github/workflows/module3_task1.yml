@@ -10,10 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: cd module3_task1
-      - run: ls
-      - run: make help
-      - run: make build
-      - run: make clean
-      - run: make build
-      - run: make post POST_NAME="Test name" POST_TITLE="test_title"
+      - run: module3_task1/setup.sh
+      - run: cd module3_task1 && make help
+      - run: cd module3_task1 && make build
+      - run: cd module3_task1 && make clean
+      - run: cd module3_task1 && make build
+      - run: cd module3_task1 && make post POST_NAME="Test name" POST_TITLE="test_title"
