@@ -1,6 +1,5 @@
 build: ## Compile the source code of the application to a binary named awesome-api
 	make lint
-	go get github.com/gorilla/mux
 	go build
 
 run: ## Run the application in background by executing the binary awesome-api, and write logs into a file named awesome-api.log
