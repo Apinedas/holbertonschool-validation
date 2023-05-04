@@ -1,5 +1,9 @@
 ## golang project
 
+# Prerequisites
+golang latest version
+make latest version
+
 # Lifecycle
 
 build:  Compile the source code of the application to a binary named awesome-api

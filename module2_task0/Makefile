@@ -9,11 +9,12 @@ stop: ## Stop the application with the command kill XXXXX where XXXXX is the Pro
 	kill "$(shell pgrep awesome-api)"
 
 clean: ## Delete the binary awesome-api and the log file awesome-api.log
+	-make stop
 	rm ./awesome-api ./awesome-api.log
 
 test: ## Check expected behaviour of the app
-	-curl http://localhost:9999
-	-curl http://localhost:9999/health
+	curl http://localhost:9999
+	curl http://localhost:9999/health
 
 help: ## Show this help message
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
