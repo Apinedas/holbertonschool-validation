@@ -11,7 +11,7 @@ stop: ## Stop the application with the command kill XXXXX where XXXXX is the Pro
 
 clean: ## Delete the binary awesome-api and the log file awesome-api.log
 	-make stop
-	rm ./awesome-api ./awesome-api.log
+	-rm ./awesome-api ./awesome-api.log
 
 test: ## Check expected behaviour of the app
 	curl http://localhost:9999
