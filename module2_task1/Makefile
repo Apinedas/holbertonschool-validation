@@ -18,8 +18,7 @@ test: ## Check expected behaviour of the app
 	curl http://localhost:9999/health
 
 lint: ## Static linting on go files using golangci-lint
-	echo $(shell which golangci-lint)
-	golangci-lint run
+	@golangci-lint run
 
 help: ## Show this help message
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
