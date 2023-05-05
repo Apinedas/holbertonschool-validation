@@ -1,8 +1,9 @@
-build:	check ## Generate the website from the markdown and configuration files in the directory dist/ and compile the source code of the application to a binary named awesome-api
+build: ## Generate the website from the markdown and configuration files in the directory dist/ and compile the source code of the application to a binary named awesome-api
+	make check
 	hugo
 
 clean: ## Cleanup the content of the directory dist/, the binary awesome-api and the log file awesome-api.log
-	rm -rf ./dist
+	-rm -rf ./dist
 	-make stop
 	-rm ./awesome-api ./awesome-api.log ./coverage-units.out 
 
