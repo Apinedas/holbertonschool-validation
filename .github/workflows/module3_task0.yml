@@ -4,8 +4,9 @@ on:
   schedule:
     - cron: "0 0 * * *"
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Check out repository code
-      uses: actions/checkout@v3
-    - run: make help
+  module3_task0:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: make help
