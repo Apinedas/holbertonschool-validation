@@ -21,3 +21,6 @@ integration-tests:  execute the Golang integration tests
 check:  Markdown linting on syntax and dead links
 validate:  should validate the file ./dist/index.html by using the command line Holberton’s W3C Validator
 help:  Shows this help message
+
+## Build Workflow
+Does static linting and build both website and API binary
