@@ -24,8 +24,11 @@ jobs:
           name: awesome-website
           path: ./module3_task3/awesome-website.zip
   build-release:
+    needs: build-artifact
     runs-on: ubuntu-22.04
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - name: Download awesome-website zip file
         uses: actions/download-artifact@v3
         with:
