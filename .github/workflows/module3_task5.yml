@@ -22,7 +22,7 @@ jobs:
         with:
           name: awesome-website
           path: ./module3_task4/awesome-website.zip
-      - name: Deploy draft to Netlify 
+      - name: Deploy draft to Netlify
         if: github.event_name == 'pull_request'
         uses: nwtgck/actions-netlify@v2.0
         with:
@@ -34,7 +34,7 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
-      - name: Deploy prod to Netlify 
+      - name: Deploy prod to Netlify
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: nwtgck/actions-netlify@v2.0
         with:
@@ -66,5 +66,5 @@ jobs:
         with:
           files: |
             awesome-website.zip
-            ./module3_task4/DEPLOY.md
-          body_path: ./module3_task4/DEPLOY.md
+            ./module3_task5/DEPLOY.md
+          body_path: ./module3_task5/DEPLOY.md
