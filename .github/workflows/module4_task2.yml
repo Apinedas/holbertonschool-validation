@@ -11,7 +11,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: curl -LO https://storage.googleapis.com/container-structure-test/latest/container-structure-test-linux-amd64 && chmod +x container-structure-test-linux-amd64 && sudo mv container-structure-test-linux-amd64 /usr/local/bin/container-structure-test
-      - run: cd module4_task2 && make docker-build
+      - run: cd module4_task2 && make build-docker
       - run: cd module4_task2 && make build
       - run: cd module4_task2 && make unit-tests
       - run: cd module4_task2 && make integration-tests
