@@ -18,7 +18,7 @@ jobs:
       - run: cd module4_task2 && make validate
       - run: cd module4_task2 && make help
       - run: cd module4_task2 && make lint
-      - run: cd module4_task2 && make docker-test
+      - run: cd module4_task2 && make docker-tests
       - run: cd module4_task2 && make package
       - uses: actions/upload-artifact@v3
         with:

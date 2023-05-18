@@ -28,7 +28,7 @@ integration-tests:  execute the Golang integration tests
 check:  Markdown linting on syntax and dead links
 validate:  should validate the file ./dist/index.html by using the command line
 Holberton’s W3C Validator
-docker-test: Tests the created image on docker build using container-structure-test
+docker-tests: Tests the created image on docker build using container-structure-test
 help:  Shows this help message
 
 ## Build Workflow
