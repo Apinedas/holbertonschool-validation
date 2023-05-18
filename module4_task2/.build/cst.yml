@@ -4,7 +4,7 @@ commandTests:
     command: "which"
     args: ["hugo"]
     expectedOutput: ["/usr/local/bin/hugo"]
-  - name:  "Go exists"
+  - name: "Go exists"
     command: "which"
     args: ["go"]
     expectedOutput: ["/usr/local/go/bin/go"]

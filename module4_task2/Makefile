@@ -35,6 +35,7 @@ test: ## Check expected behaviour of the app
 	@make validate
 
 lint: ## Static linting on go files using golangci-lint
+	@make build-docker
 	@docker run --rm -i hadolint/hadolint < ./.build/Dockerfile
 	@docker run --volume=$(shell pwd):/app --workdir=/app --rm awesome:build markdownlint README.md DEPLOY.md
 
