@@ -1,5 +1,5 @@
 go-build: ## Generates the API binary from golang files
-	@docker run --volume=$(shell pwd):/app --workdir=/app golang:1.15.8-buster go build
+	@docker run --volume=$(shell pwd):/app --workdir=/app golang:latest go build
 
 hugo-build: ## Generates the static site using go hugo
 	@hugo
@@ -38,7 +38,7 @@ unit-tests: ## execute (successfully) the Golang unit tests
 	@docker run --volume=$(shell pwd):/app --workdir=/app golang:latest go test -v -short -coverprofile=coverage-units.out
 
 integration-tests: ## execute the Golang integration tests
-	@docker run --volume=$(shell pwd):/app --workdir=/app golang:1.15.8-buster go test -v -coverprofile=coverage-integrations.out
+	@docker run --volume=$(shell pwd):/app --workdir=/app golang:latest go test -v -coverprofile=coverage-integrations.out
 
 check: ## Markdown linting on syntax and dead links
 	@markdown-link-check ./content/posts/*
