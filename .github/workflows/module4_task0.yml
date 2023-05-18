@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - run: cd module4_task0 && sudo ./setup.sh
+      - run: cd module4_task0 && ./setup.sh
       - run: cd module4_task0 && make build
       - run: cd module4_task0 && make unit-tests
       - run: cd module4_task0 && make integration-tests
