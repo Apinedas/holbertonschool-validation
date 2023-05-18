@@ -1,3 +1,6 @@
 # Local Netlify folder
 .netlify
 */dist/
+/module4_task1/
+.github/workflows/module4_task1.yml
+.gitignore
